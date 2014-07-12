@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.tvguidemicro" name="Micro TV Guide" version="0.0.38" provider-name="microtv, dixiedean, twinther">
+<addon id="script.tvguidemicro" name="Micro TV Guide" version="0.0.39" provider-name="microtv, dixiedean, twinther">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.simplejson" version="2.0.10"/>
@@ -9,11 +9,6 @@
     <extension point="xbmc.python.script" library="addon.py"><provides>video</provides></extension>
     <extension point="xbmc.python.script" library="addon.py"/>
     <extension point="xbmc.service" library="service.py" start="login" />
-    <extension point="xbmc.addon.repository" name="Micro TV Addons">
-		<info compressed="false">https://raw.github.com/microtv/guide/master/addons.xml</info>
-		<checksum>https://raw.github.com/microtv/guide/master/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.github.com/microtv/guide/master/zips</datadir>
-	</extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="da">TV Guide med XMLTV og streaming support</summary>
         <summary lang="de">TV Guide mit XMLTV und Streamingunterstützung</summary>
