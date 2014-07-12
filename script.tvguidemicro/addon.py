@@ -30,7 +30,7 @@ xbmc.Player().stop
 ADDON       = xbmcaddon.Addon(id = 'script.tvguidemicro')
 HOME        = ADDON.getAddonInfo('path')
 TITLE       = 'Micro TV Guide'
-VERSION     = '0.0.37'
+VERSION     = '0.0.38'
 addon       = xbmcaddon.Addon()
 addonid     = addon.getAddonInfo('id')
 versioninfo = addon.getAddonInfo('version')
