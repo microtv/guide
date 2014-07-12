@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.microtv" name="Micro TV Addons" version="1.3.0" provider-name="Micro TV">
-	<extension point="xbmc.addon.repository" name="Micro TV Addons">
+<addon id="repository.microtv-addons" name="microtv-addons" version="1.4.0" provider-name="microtv">
+	<extension point="xbmc.addon.repository" name="microtv-addons-1.4.0">
 		<info compressed="false">https://github.com/microtv/guide/raw/master/addons.xml</info>
 		<checksum>https://github.com/microtv/guide/raw/master/addons.xml.md5</checksum>
 		<datadir zip="true">https://github.com/microtv/guide/raw/master/zips</datadir>
