@@ -39,7 +39,7 @@ import base64
 ADDON        = xbmcaddon.Addon(id = 'script.tvguidemicro')
 MASHMODE     = (ADDON.getSetting('mashmode') == 'true')
 SKIN         = ADDON.getSetting('dixie.skin')
-SKINSVERSION = '2'
+SKINSVERSION = '1'
 datapath     = xbmc.translatePath(ADDON.getAddonInfo('profile'))
 extras       = os.path.join(datapath, 'extras')
 skinfolder   = os.path.join(datapath, extras, 'skins')
@@ -52,7 +52,7 @@ checkversion = os.path.join(skinfolder, '2')
 print '********* LATEST SKINS VERSION *********'
 print SKINSVERSION
 
-                            
+
 try:
     if not os.path.exists(skinfolder):
         print '************* SKINS MISSING *************'
@@ -96,8 +96,6 @@ try:
             try: os.remove(LocalFile)
             except: pass
 except: pass
-                            
-
 
 
 
@@ -218,10 +216,7 @@ class TVGuide(xbmcgui.WindowXML):
 
     def __init__(self):
         super(TVGuide, self).__init__()
-#
-#
-#
-#        self.initialized = False
+        self.initialized = False
         self.notification = None
         self.redrawingEPG = False
         self.timebarVisible = False
@@ -298,11 +293,11 @@ class TVGuide(xbmcgui.WindowXML):
 
     @buggalo.buggalo_try_except({'method' : 'TVGuide.onInit'})
     def onInit(self):
-#        if self.initialized:
+        if self.initialized:
             # onInit(..) is invoked again by XBMC after a video addon exits after being invoked by XBMC.RunPlugin(..)
-#           xbmc.log("[script.tvguidemicro] TVGuide.onInit(..) invoked, but we're already initialized!")
-#            return
-#        self.initialized = True
+            xbmc.log("[script.tvguidemicro] TVGuide.onInit(..) invoked, but we're already initialized!")
+            return
+        self.initialized = True
         self._hideControl(self.C_MAIN_MOUSE_CONTROLS, self.C_MAIN_OSD)
         self._showControl(self.C_MAIN_EPG, self.C_MAIN_LOADING)
         self._showControl(self.C_MAIN_BLACKOUT)
