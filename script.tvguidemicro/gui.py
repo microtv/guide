@@ -39,7 +39,7 @@ import base64
 ADDON        = xbmcaddon.Addon(id = 'script.tvguidemicro')
 MASHMODE     = (ADDON.getSetting('mashmode') == 'true')
 SKIN         = ADDON.getSetting('dixie.skin')
-SKINSVERSION = '1'
+SKINSVERSION = '2'
 datapath     = xbmc.translatePath(ADDON.getAddonInfo('profile'))
 extras       = os.path.join(datapath, 'extras')
 skinfolder   = os.path.join(datapath, extras, 'skins')
@@ -47,31 +47,15 @@ mashpath     = os.path.join(skinfolder, 'FXB v2.2')
 skinpath     = os.path.join(skinfolder, SKIN)
 mashfile     = os.path.join(xbmc.translatePath('special://profile/addon_data/plugin.video.movie25/Dixie/mashup.ini'))
 version      = os.path.join(skinfolder, 'skinsversion.txt')
+checkversion = os.path.join(skinfolder, '2')
 
 print '********* LATEST SKINS VERSION *********'
 print SKINSVERSION
 
-
-ooOOOoo = ''
-def ttTTtt(i, t1, t2=[]):
-	t = ooOOOoo
-	for c in t1:
-	  t += chr(c)
-	  i += 1
-	  if i > 1:
-	   t = t[:-1]
-	   i = 0  
-	for c in t2:
-	  t += chr(c)
-	  i += 1
-	  if i > 1:
-	   t = t[:-1]
-	   i = 0
-	return t
-
+                            
 try:
-    if not os.path.exists(mashpath):
-        print '************* MASH MISSING *************'
+    if not os.path.exists(skinfolder):
+        print '************* SKINS MISSING *************'
         Path = extras
         import urllib, dxmnew
         try: os.makedirs(Path)
@@ -90,32 +74,32 @@ try:
             except: pass
 except: pass
 
+
 try:
-    #load skin version from file
-    with open (version, 'r') as f:
-        local = f.readline()
-        print '******** EXISTING SKINS VERSION ********'
-        print local
-        f.write(version)
-        if not local == SKINSVERSION:
-            Path = extras
-            import urllib, dxmnew
-            try: os.makedirs(Path)
+    if not os.path.exists(checkversion):
+        print '************* SKIN NEEDS UPDATING *************'
+        shutil.rmtree(skinfolder)
+        Path = extras
+        import urllib, dxmnew
+        try: os.makedirs(Path)
+        except: pass
+        Url  = base64.b64decode('aHR0cDovL3N0YXRpYy5wbmdyb3VwLmluZm8vX2d1aWRlL3NraW5zLnppcA==')
+        LocalName = 'skins.zip'
+        LocalFile = xbmc.translatePath(os.path.join(Path, LocalName))
+        try: urllib.urlretrieve(Url,LocalFile)
+        except:xbmc.executebuiltin("XBMC.Notification(Micro TV Guide,Skin download failed,3000)")
+        if os.path.isfile(LocalFile):
+            print '********* SKINS ARE INSTALLING *********'
+            extractFolder = Path
+            pluginsrc = xbmc.translatePath(os.path.join(extractFolder))
+            dxmnew.unzipAndMove(LocalFile,extractFolder,pluginsrc)
+            try: os.remove(LocalFile)
             except: pass
-            Url  = base64.b64decode('aHR0cDovL3N0YXRpYy5wbmdyb3VwLmluZm8vX2d1aWRlL3NraW5zLnppcA==')
-            LocalName = 'skins.zip'
-            LocalFile = xbmc.translatePath(os.path.join(Path, LocalName))
-            try: urllib.urlretrieve(Url,LocalFile)
-            except:xbmc.executebuiltin("XBMC.Notification(Micro TV Guide,Skin download failed,3000)")
-            if os.path.isfile(LocalFile):
-                print '********** SKINS ARE UPDATING **********'
-                extractFolder = Path
-                pluginsrc = xbmc.translatePath(os.path.join(extractFolder))
-                dxmnew.unzipAndMove(LocalFile,extractFolder,pluginsrc)
-                try: os.remove(LocalFile)
-                except: pass
-        f.closed
 except: pass
+                            
+
+
+
 
 if MASHMODE:
     PATH  = mashpath
@@ -234,7 +218,10 @@ class TVGuide(xbmcgui.WindowXML):
 
     def __init__(self):
         super(TVGuide, self).__init__()
-        self.initialized = False
+#
+#
+#
+#        self.initialized = False
         self.notification = None
         self.redrawingEPG = False
         self.timebarVisible = False
@@ -311,11 +298,11 @@ class TVGuide(xbmcgui.WindowXML):
 
     @buggalo.buggalo_try_except({'method' : 'TVGuide.onInit'})
     def onInit(self):
-        if self.initialized:
+#        if self.initialized:
             # onInit(..) is invoked again by XBMC after a video addon exits after being invoked by XBMC.RunPlugin(..)
-            xbmc.log("[script.tvguidemicro] TVGuide.onInit(..) invoked, but we're already initialized!")
-            return
-        self.initialized = True
+#           xbmc.log("[script.tvguidemicro] TVGuide.onInit(..) invoked, but we're already initialized!")
+#            return
+#        self.initialized = True
         self._hideControl(self.C_MAIN_MOUSE_CONTROLS, self.C_MAIN_OSD)
         self._showControl(self.C_MAIN_EPG, self.C_MAIN_LOADING)
         self._showControl(self.C_MAIN_BLACKOUT)

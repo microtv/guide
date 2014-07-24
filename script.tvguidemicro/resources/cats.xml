@@ -792,7 +792,7 @@
                <channel>VIVA</channel>
          </cats>
          <cats>
-               <category>News and Documentaries</category>
+               <category>News and Documentaries|NTV|Premium Channels|Lifestyle and Factual</category>
                <channel>Watch</channel>
          </cats>
          <cats>
@@ -1282,7 +1282,7 @@
          </cats>
          <cats>
                <category>Spanish|Entertainment|International</category>
-               <channel>ES Canal Súper 3</channel>
+               <channel>ES Canal Super 3</channel>
          </cats>
          <cats>
                <category>Spanish|Entertainment|International</category>
@@ -1290,7 +1290,7 @@
          </cats>
          <cats>
                <category>Spanish|Entertainment|International</category>
-               <channel>ES CanalSur Televisión </channel>
+               <channel>ES CanalSur Television </channel>
          </cats>
          <cats>
                <category>Spanish|Entertainment|International</category>
@@ -1338,7 +1338,7 @@
          </cats>
          <cats>
                <category>Spanish|Entertainment|International</category>
-               <channel>ES Extremadura TV </channel>
+               <channel>ES Extremadura TV</channel>
          </cats>
          <cats>
                <category>Spanish|Entertainment|International</category>
@@ -1346,7 +1346,7 @@
          </cats>
          <cats>
                <category>Spanish|Entertainment|International</category>
-               <channel>ES Galicia TV América</channel>
+               <channel>ES Galicia TV America</channel>
          </cats>
          <cats>
                <category>Spanish|Entertainment|International</category>
@@ -2249,7 +2249,7 @@
 	     </cats>
 	     <cats>
 	         <channel>DE Eurosport</channel>
-             <category>German|Entertainment|International</category>
+             <category>German|Sports|International</category>
 	     </cats>
 	     <cats>
 	         <channel>DE History HD</channel>
@@ -2333,7 +2333,11 @@
 	     </cats>
 	     <cats>
 	         <channel>DE Sport1</channel>
-             <category>German|Entertainment|International</category>
+             <category>German|Sports|International</category>
+	     </cats>
+	     <cats>
+	         <channel>DE Sport 1+ HD</channel>
+             <category>German|Sports|International</category>
 	     </cats>
 	     <cats>
 	         <channel>DE SyFy HD</channel>
@@ -2354,5 +2358,93 @@
 	     <cats>
 	         <channel>DE ZDF Info HD</channel>
              <category>German|Entertainment|International</category>
+	     </cats>
+	     <cats>
+	         <channel>DE Pro7 HD</channel>
+             <category>German|Entertainment|International</category>
+	     </cats>
+	     <cats>
+	         <channel>DE ZDF HD</channel>
+             <category>German|Entertainment|International</category>
+	     </cats>
+	     <cats>
+	         <channel>DE Nick + Comedy Central</channel>
+             <category>German|Entertainment|International</category>
+	     </cats>
+	     <cats>
+	         <channel>DE Sky 3D</channel>
+             <category>German|Entertainment|International</category>
+	     </cats>
+	     <cats>
+	         <channel>DE Sky Cinema HD</channel>
+             <category>German|Entertainment|International</category>
+	     </cats>
+	     <cats>
+	         <channel>DE Sky Bundesliga HD 1</channel>
+             <category>German|Sports|International</category>
+	     </cats>
+	     <cats>
+	         <channel>WEDU VME</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>WEDU FLA Channel</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>WTVT Movies</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>WUSF KIDS</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>WUSF CREATE</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>WHRT</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>WMOR HDTV</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>WTTA THE COOL TV</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>WTOG HDTV</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>WZRA</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>WLWN LIVE WELL</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>WFTT BOUNCE TV</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>WFTT GET TV</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>WXPX HDTV</channel>
+             <category>North America|Tampa|Entertainment</category>
+	     </cats>
+	     <cats>
+	         <channel>MSNBC</channel>
+             <category>North America|Tampa|News and Documentaries</category>
+	     </cats>
+	     <cats>
+	         <channel>Al Jazeera America</channel>
+             <category>North America|Tampa|News and Documentaries</category>
 	     </cats>
      </Document>
