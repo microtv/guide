@@ -100,18 +100,21 @@ def checkForAlternateStreaming(url):
         
     return False
 
+
+
 def alternateStream(url):
     xbmc.executebuiltin('XBMC.RunPlugin(%s)' % url)
+    if 'ntv' in url:
+        xbmc.executebuiltin('xbmc.PlayMedia('+url+')')
     
     retries = 10
     while retries > 0 and not xbmc.Player().isPlaying():
         retries -= 1
         xbmc.sleep(1000)
-        
+    
     print '****** Alternate Method ******'
     print url
     return True
-
 
 
 if __name__ == '__main__': 
