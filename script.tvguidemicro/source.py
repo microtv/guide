@@ -742,6 +742,11 @@ class Database(object):
         except ValueError:
             return None
 
+
+
+
+
+
     def _createTables(self):
         c = self.conn.cursor()
 

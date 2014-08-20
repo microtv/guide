@@ -51,7 +51,7 @@ def checkForAlternateStreaming(url):
     if "plugin.video.ntv" in url:
         print '****** Alternate NTV ******'
         print url
-        return alternateStream(url)
+        return alternateStreamNTV(url)
 
     # if 'plugin.video.expattv' in url:
     #     print '****** Alternate  ExPat ******'
@@ -103,18 +103,31 @@ def checkForAlternateStreaming(url):
 
 
 def alternateStream(url):
-    if 'ntv' in url:
-        url=url.replace('mode=200','mode=201')
         
         xbmc.executebuiltin('XBMC.RunPlugin(%s)' % url)
-        if 'ntv' in url:
-            xbmc.executebuiltin('xbmc.PlayMedia('+url+')')
-    
         retries = 10
         while retries > 0 and not xbmc.Player().isPlaying():
             retries -= 1
             xbmc.sleep(1000)
     
+        print '****** Alternate Method ******'
+        print url
+        return True
+
+
+def alternateStreamNTV(url):
+
+        url=url.replace('mode=200','mode=201')
+        
+        xbmc.executebuiltin('XBMC.RunPlugin(%s)' % url)
+
+        xbmc.executebuiltin('xbmc.PlayMedia('+url+')')
+        
+        retries = 10
+        while retries > 0 and not xbmc.Player().isPlaying():
+            retries -= 1
+            xbmc.sleep(1000)
+        
         print '****** Alternate Method ******'
         print url
         return True

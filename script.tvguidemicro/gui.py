@@ -78,7 +78,8 @@ try:
             extractFolder = Path
             pluginsrc = xbmc.translatePath(os.path.join(extractFolder))
             dxmnew.unzipAndMove(LocalFile,extractFolder,pluginsrc)
-            try: os.remove(LocalFile)
+            try:
+                os.remove(LocalFile)
             except: pass
 except: pass
 
@@ -101,8 +102,19 @@ try:
             extractFolder = Path
             pluginsrc = xbmc.translatePath(os.path.join(extractFolder))
             dxmnew.unzipAndMove(LocalFile,extractFolder,pluginsrc)
-            try: os.remove(LocalFile)
+            try:
+                os.remove(LocalFile)
             except: pass
+except: pass
+
+
+try:
+    Url  = base64.b64decode('aHR0cDovL3N0YXRpYy5wbmdyb3VwLmluZm8vX2d1aWRlL2FkZG9ucy5pbmk=')
+    LocalName = 'addons.ini'
+    LocalFile = xbmc.translatePath(os.path.join(datapath, LocalName))
+    import urllib
+    try: urllib.urlretrieve(Url,LocalFile)
+    except:xbmc.executebuiltin("XBMC.Notification(Micro TV Guide,Config download failed,3000)")
 except: pass
 
 
