@@ -117,7 +117,7 @@ def alternateStream(url):
 
 def alternateStreamNTV(url):
 
-        url=url.replace('mode=200','mode=201')
+#url=url.replace('mode=200','mode=201')
         
         xbmc.executebuiltin('XBMC.RunPlugin(%s)' % url)
 
