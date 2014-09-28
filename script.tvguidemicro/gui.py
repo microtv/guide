@@ -51,7 +51,7 @@ mashpath     = os.path.join(skinfolder, 'FXB v2.2')
 skinpath     = os.path.join(skinfolder, SKIN)
 mashfile     = os.path.join(xbmc.translatePath('special://profile/addon_data/plugin.video.movie25/Dixie/mashup.ini'))
 logos        = os.path.join(extras, 'logos')
-checkversion = os.path.join(skinfolder, '2')
+checkversion = os.path.join(skinfolder, '3')
 
 nologos      = os.path.join(logos, 'None')
 dest         = os.path.join(extras, 'logos.zip')
