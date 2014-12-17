@@ -58,6 +58,11 @@ def checkForAlternateStreaming(url):
     #     print url
     #     return alternateStream(url)
 
+    if 'plugin.video.microtv' in url:
+        print '****** Alternate  Micro TV ******'
+        print url
+        return alternateStream(url)
+
     if 'plugin.video.filmon' in url:
         print '****** Alternate  FilmOn ******'
         print url
