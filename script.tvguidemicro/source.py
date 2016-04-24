@@ -894,7 +894,7 @@ class Source(object):
         return False
 
     def _downloadUrl(self, url):
-        u = urllib2.urlopen(url, timeout=30)
+        u = urllib.urlopen(url)
         content = u.read()
         u.close()
 
@@ -1007,11 +1007,13 @@ class DIXIESource(Source):
             return dixieUrl
 
         if dixieUrl == 'BASIC CHANNELS':
-            dixieUrl = base64.b64decode('aHR0cDovL3N0YXRpYy5wbmdyb3VwLmluZm8vX2d1aWRlL2Jhc2ljLw==')
+            # old server dixieUrl = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvYmFzaWMv')
+            dixieUrl = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvYmFzaWMv')
             return dixieUrl
         
         if dixieUrl == 'NTV CHANNELS':
-            dixieUrl = base64.b64decode('aHR0cDovL3N0YXRpYy5wbmdyb3VwLmluZm8vX2d1aWRlL250di8=')
+            # old server dixieUrl = base64.b64decode('aHR0cDovL3N0YXRpYy5wbmdyb3VwLmluZm8vX2d1aWRlL250di8=')
+            dixieUrl = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvbnR2Lw==')
             return dixieUrl
 
 
@@ -1057,7 +1059,7 @@ class DIXIESource(Source):
     def getCategories(self):
         cat  = dict()
         path = os.path.join(datapath, 'cats.xml')
-        url = base64.b64decode('aHR0cDovL3N0YXRpYy5wbmdyb3VwLmluZm8vX2d1aWRlL2NhdHMueG1s')
+        url = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvY2F0cy54bWw=')
         f = urllib2.urlopen(url, timeout=30)
         xml = f.read()
         f.close()
