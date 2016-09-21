@@ -57,7 +57,7 @@ checkversion = os.path.join(skinfolder, '3')
 
 nologos      = os.path.join(logos, 'None')
 dest         = os.path.join(extras, 'logos.zip')
-logourl      = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvbG9nb3Muemlw')
+logourl      = base64.b64decode('aHR0cHM6Ly9kbC5kcm9wYm94dXNlcmNvbnRlbnQuY29tL3UvMjA0MjA4MDgvX2d1aWRlL2xvZ29zLnppcA==')
 
 print '********* LATEST SKINS VERSION *********'
 print checkversion
@@ -70,7 +70,7 @@ try:
         import urllib, dxmnew
         try: os.makedirs(Path)
         except: pass
-        Url  = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvc2tpbnMuemlw')
+        Url  = base64.b64decode('aHR0cHM6Ly9kbC5kcm9wYm94dXNlcmNvbnRlbnQuY29tL3UvMjA0MjA4MDgvX2d1aWRlL3NraW5zLnppcA==')
         LocalName = 'skins.zip'
         LocalFile = xbmc.translatePath(os.path.join(Path, LocalName))
         try: urllib.urlretrieve(Url,LocalFile)
@@ -94,7 +94,7 @@ try:
         import urllib, dxmnew
         try: os.makedirs(Path)
         except: pass
-        Url  = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvc2tpbnMuemlw')
+        Url  = base64.b64decode('aHR0cHM6Ly9kbC5kcm9wYm94dXNlcmNvbnRlbnQuY29tL3UvMjA0MjA4MDgvX2d1aWRlL3NraW5zLnppcA==')
         LocalName = 'skins.zip'
         LocalFile = xbmc.translatePath(os.path.join(Path, LocalName))
         try: urllib.urlretrieve(Url,LocalFile)
@@ -113,7 +113,7 @@ except: pass
 
 
 try:
-    Url  = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvYWRkb25zLmluaQ==')
+    Url  = base64.b64decode('aHR0cHM6Ly9kbC5kcm9wYm94dXNlcmNvbnRlbnQuY29tL3UvMjA0MjA4MDgvX2d1aWRlL2FkZG9ucy5pbmk==')
     LocalName = 'addons.ini'
     LocalFile = xbmc.translatePath(os.path.join(datapath, LocalName))
     import urllib

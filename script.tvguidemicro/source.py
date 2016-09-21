@@ -1008,12 +1008,20 @@ class DIXIESource(Source):
 
         if dixieUrl == 'BASIC CHANNELS':
             # old server dixieUrl = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvYmFzaWMv')
-            dixieUrl = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvYmFzaWMv')
+            # new server dixieUrl = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvYmFzaWMv')
+            #
+            # USING DROPBOX
+            #
+            dixieUrl = base64.b64decode('aHR0cHM6Ly9kbC5kcm9wYm94dXNlcmNvbnRlbnQuY29tL3UvMjA0MjA4MDgvX2d1aWRlL2Jhc2ljLw==')
             return dixieUrl
         
         if dixieUrl == 'NTV CHANNELS':
             # old server dixieUrl = base64.b64decode('aHR0cDovL3N0YXRpYy5wbmdyb3VwLmluZm8vX2d1aWRlL250di8=')
-            dixieUrl = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvbnR2Lw==')
+            # new server dixieUrl = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvbnR2Lw==')
+            #
+            # USING DROPBOX
+            #
+            dixieUrl = base64.b64decode('aHR0cHM6Ly9kbC5kcm9wYm94dXNlcmNvbnRlbnQuY29tL3UvMjA0MjA4MDgvX2d1aWRlL250di8==')
             return dixieUrl
 
 
@@ -1059,7 +1067,7 @@ class DIXIESource(Source):
     def getCategories(self):
         cat  = dict()
         path = os.path.join(datapath, 'cats.xml')
-        url = base64.b64decode('aHR0cDovL3d3dy5taWNyb3NpdGVzbWFsYWdhLmNvbS9fZ3VpZGUvY2F0cy54bWw=')
+        url = base64.b64decode('aHR0cHM6Ly9kbC5kcm9wYm94dXNlcmNvbnRlbnQuY29tL3UvMjA0MjA4MDgvX2d1aWRlL2NhdHMueG1s')
         f = urllib2.urlopen(url, timeout=30)
         xml = f.read()
         f.close()
